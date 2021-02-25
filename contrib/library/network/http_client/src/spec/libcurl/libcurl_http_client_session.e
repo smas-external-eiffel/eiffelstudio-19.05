@@ -112,6 +112,13 @@ feature -- Helper
 		do
 			Result := custom ("DELETE", a_path, ctx)
 		end
+		
+	delete_with_data (a_path: READABLE_STRING_8; a_ctx: detachable HTTP_CLIENT_REQUEST_CONTEXT; data: detachable READABLE_STRING_8): HTTP_CLIENT_RESPONSE
+			-- <Precursor>
+		do
+			check False end
+			Result := custom ("DELETE", a_path, a_ctx)
+		end
 
 feature {NONE} -- Implementation
 

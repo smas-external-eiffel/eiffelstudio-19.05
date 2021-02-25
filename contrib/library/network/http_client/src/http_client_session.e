@@ -225,6 +225,14 @@ feature -- Helper
 			is_available: is_available
 		deferred
 		end
+		
+	delete_with_data (a_path: READABLE_STRING_8; a_ctx: detachable HTTP_CLIENT_REQUEST_CONTEXT; data: detachable READABLE_STRING_8): HTTP_CLIENT_RESPONSE
+		-- Response for DELETE request based on Current, `a_path' and `ctx'
+		-- with input `data'	
+		require
+			is_available: is_available
+		deferred
+		end
 
 feature -- Status report
 
